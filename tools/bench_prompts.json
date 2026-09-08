@@ -1,0 +1,72 @@
+[
+  {
+    "name": "qa",
+    "max_tokens": 256,
+    "prompts": [
+      "What are the main differences between TCP and UDP? Be concise.",
+      "Explain the OSI model layers. What does each layer do? Be succinct.",
+      "What is the difference between HTTP/1.1 and HTTP/2? List the key improvements. Be brief.",
+      "Compare synchronous and asynchronous programming. When would you use each? Be concise.",
+      "What is the CAP theorem? Explain why you can only pick two of consistency, availability, and partition tolerance.",
+      "Explain how DNS resolution works step by step, from typing a URL to loading the page.",
+      "What are the differences between OAuth 2.0 and OIDC? When should you use each?",
+      "Compare and contrast REST, GraphQL, and gRPC. What are the tradeoffs of each?"
+    ]
+  },
+  {
+    "name": "code",
+    "max_tokens": 512,
+    "prompts": [
+      "Write a Python function that implements binary search on a sorted list. Include type hints and docstring.",
+      "Write a Python function that merges two sorted lists into one sorted list. Include type hints and docstring.",
+      "Write a Python function that finds the longest palindromic substring in a string. Include type hints and docstring.",
+      "Write a Python function that implements a queue using two stacks. Include type hints and docstring.",
+      "Write a Python function that implements the quicksort algorithm with random pivot selection. Include type hints and docstring.",
+      "Write a Python function that flattens a nested dictionary of arbitrary depth. Include type hints and docstring.",
+      "Write a Python function that generates all valid combinations of N pairs of parentheses. Include type hints and docstring.",
+      "Write a Python function that implements the LRU cache from scratch with O(1) get and put. Include type hints and docstring."
+    ]
+  },
+  {
+    "name": "json",
+    "max_tokens": 1024,
+    "prompts": [
+      "Generate a JSON array of 10 fictional employees with fields: name, age, department, salary, email, skills (array of 3). Output ONLY valid JSON, no explanation.",
+      "Generate a JSON object representing a library catalog of 8 books with fields: title, author, isbn, genre, pages, rating, yearPublished, tags (array of 3). Output ONLY valid JSON, no explanation.",
+      "Generate a JSON array of 6 courses with fields: name, instructor, duration, difficulty, modules (array of 4 strings), prerequisites (array of 3). Output ONLY valid JSON, no explanation.",
+      "Generate a JSON array of 5 countries with fields: name, capital, population, language, continent. Output ONLY valid JSON, no explanation.",
+      "Generate a JSON array of 7 cities with fields: name, country, population, area_km2, climate, landmarks (array of 3), and timezone_offset. Output ONLY valid JSON, no explanation.",
+      "Generate a JSON object representing a project management tool state with 5 tasks. Each task has: id, title, assignee, status, due_date, tags (array of 2). Output ONLY valid JSON, no explanation.",
+      "Generate a JSON array of 8 restaurants with fields: name, cuisine, rating, price_range, location (object with city and state), phone, and popular_dishes (array of 3). Output ONLY valid JSON, no explanation.",
+      "Generate a JSON array of 5 movies with fields: title, director, release_year, genre, duration_minutes, imdb_rating, cast (array of 3 names), and streaming_platform. Output ONLY valid JSON, no explanation."
+    ]
+  },
+  {
+    "name": "math",
+    "max_tokens": 64,
+    "prompts": [
+      "What is 7823 * 4519? Show only the answer.",
+      "What is 3947 + 8265? Show only the answer.",
+      "What is 6247 * 3981? Show only the answer.",
+      "What is 5192 * 7364? Show only the answer.",
+      "What is 9841 / 27? Show only the answer.",
+      "What is 6982 / 43? Show only the answer.",
+      "What is 55555 / 15? Show only the answer.",
+      "What is 8742 / 26? Show only the answer."
+    ]
+  },
+  {
+    "name": "longcode",
+    "max_tokens": 2048,
+    "prompts": [
+      "Write a complete Python implementation of a red-black tree with insert, delete, search, and in-order traversal. Include all rotation methods.",
+      "Write a complete Python implementation of a singly-linked list with head/tail, insert at end, delete by value, reverse, and find middle node. Handle edge cases.",
+      "Write a complete Python implementation of a hash map using separate chaining. Include: put, get, delete, resize on load factor 0.75, hash function.",
+      "Write a complete Python implementation of a Trie including insert, search, startsWith, delete, and auto-complete. Include unit tests.",
+      "Write a complete Python implementation of a file system in user space using a dictionary-based virtual FS. Include: mkdir, write, read, ls, cat, rm. Handle relative and absolute paths.",
+      "Write a complete Python HTTP server from scratch using only the socket module. Include: GET and POST handling, routing, response codes, static file serving, and content-type negotiation.",
+      "Write a complete Python implementation of a concurrent web scraper. Include: multi-threaded downloads, rate limiting, retry with exponential backoff, robots.txt parsing, and results saving to JSON.",
+      "Write a complete Python log aggregator. Include: file watcher for multiple log files parsing syslog format, pattern filtering with regex, deduplication, time-windowed aggregation, and console output."
+    ]
+  }
+]

@@ -1,0 +1,255 @@
+{
+  "timestamp_utc": "2026-09-08T00:12:25.989392+00:00",
+  "base_url": "http://127.0.0.1:30000",
+  "model": "dealignai/Qwen3.8-Flash-Next-ABLITERATED-NVFP4",
+  "mode": "smoke",
+  "ok": false,
+  "measurement": "non-streaming end-to-end; includes prefill, decode and HTTP; NOT decode-only",
+  "results": [
+    {
+      "name": "auth",
+      "ok": true,
+      "http_status": 401
+    },
+    {
+      "name": "math",
+      "ok": true,
+      "result": {
+        "prompt": "What is 2 + 2? Reply with the digit only.",
+        "elapsed_seconds": 1.6991645020025317,
+        "completion_tokens": 2,
+        "e2e_output_tokens_per_second": 1.1770490718485007,
+        "response": {
+          "id": "c308388f547a493a98c310774f393cb9",
+          "object": "chat.completion",
+          "created": 1788826336,
+          "model": "dealignai/Qwen3.8-Flash-Next-ABLITERATED-NVFP4",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "4",
+                "reasoning_content": null,
+                "tool_calls": null
+              },
+              "logprobs": null,
+              "finish_reason": "stop",
+              "matched_stop": 248046
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 26,
+            "total_tokens": 28,
+            "completion_tokens": 2,
+            "prompt_tokens_details": null,
+            "reasoning_tokens": 0
+          },
+          "metadata": {
+            "weight_version": "default",
+            "weight_versions": [
+              {
+                "version": "default",
+                "start": 0,
+                "end": 2
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "json",
+      "ok": true,
+      "result": {
+        "prompt": "Return only this JSON object, no Markdown: {\"ok\":true,\"value\":7}",
+        "elapsed_seconds": 0.8919705049920594,
+        "completion_tokens": 10,
+        "e2e_output_tokens_per_second": 11.211133040872268,
+        "response": {
+          "id": "3f34d6d6245540939dff2b840ae58ca2",
+          "object": "chat.completion",
+          "created": 1788826337,
+          "model": "dealignai/Qwen3.8-Flash-Next-ABLITERATED-NVFP4",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"ok\":true,\"value\":7}",
+                "reasoning_content": null,
+                "tool_calls": null
+              },
+              "logprobs": null,
+              "finish_reason": "stop",
+              "matched_stop": 248046
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 30,
+            "total_tokens": 40,
+            "completion_tokens": 10,
+            "prompt_tokens_details": null,
+            "reasoning_tokens": 0
+          },
+          "metadata": {
+            "weight_version": "default",
+            "weight_versions": [
+              {
+                "version": "default",
+                "start": 0,
+                "end": 10
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "tool_parser",
+      "ok": true,
+      "result": {
+        "prompt": "Use get_weather to look up the current weather in Warsaw. Do not invent the weather.",
+        "elapsed_seconds": 1.4759723549941555,
+        "completion_tokens": 27,
+        "e2e_output_tokens_per_second": 18.293025549321293,
+        "response": {
+          "id": "d7e35e3199084706891869fd02eaf1d3",
+          "object": "chat.completion",
+          "created": 1788826338,
+          "model": "dealignai/Qwen3.8-Flash-Next-ABLITERATED-NVFP4",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "",
+                "reasoning_content": null,
+                "tool_calls": [
+                  {
+                    "id": "call_7ab7036e4d69420db961be9a",
+                    "index": 0,
+                    "type": "function",
+                    "function": {
+                      "name": "get_weather",
+                      "arguments": "{\"city\": \"Warsaw\"}"
+                    }
+                  }
+                ]
+              },
+              "logprobs": null,
+              "finish_reason": "tool_calls",
+              "matched_stop": null
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 300,
+            "total_tokens": 327,
+            "completion_tokens": 27,
+            "prompt_tokens_details": null,
+            "reasoning_tokens": 0
+          },
+          "metadata": {
+            "weight_version": "default",
+            "weight_versions": [
+              {
+                "version": "default",
+                "start": 0,
+                "end": 27
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "reasoning_parser",
+      "ok": true,
+      "result": {
+        "prompt": "Compute 17 * 19, verify your arithmetic, then give the result.",
+        "elapsed_seconds": 7.151124885000172,
+        "completion_tokens": 323,
+        "e2e_output_tokens_per_second": 45.16771909234979,
+        "response": {
+          "id": "66a910268b774aaf98777d559eed0160",
+          "object": "chat.completion",
+          "created": 1788826345,
+          "model": "dealignai/Qwen3.8-Flash-Next-ABLITERATED-NVFP4",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "\n\n**17 × 19 = 323**\n\nVerification via three methods:\n\n1. **Distribute:** 17 × (20 − 1) = 340 − 17 = **323**\n2. **Expand:** (10 + 7) × 19 = 190 + 133 = **323**\n3. **Difference of squares:** (18 − 1)(18 + 1) = 18² − 1 = 324 − 1 = **323**\n\nAll three agree. The result is **323**.",
+                "reasoning_content": "Let me compute 17 * 19.\n\n17 * 19 = 17 * (20 - 1) = 17 * 20 - 17 * 1 = 340 - 17 = 323.\n\nLet me verify: \n- 17 * 19: break it down as (10 + 7) * 19 = 10*19 + 7*19 = 190 + 133 = 323. ✓\n- Another check: 17 * 19 = (18-1)(18+1) = 18² - 1 = 324 - 1 = 323. ✓\n\nAll three methods agree: 323.\n",
+                "tool_calls": null
+              },
+              "logprobs": null,
+              "finish_reason": "stop",
+              "matched_stop": 248046
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 28,
+            "total_tokens": 351,
+            "completion_tokens": 323,
+            "prompt_tokens_details": null,
+            "reasoning_tokens": 180
+          },
+          "metadata": {
+            "weight_version": "default",
+            "weight_versions": [
+              {
+                "version": "default",
+                "start": 0,
+                "end": 323
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "long_context_canary",
+      "ok": false,
+      "expected": "7fcbaa18b6a3",
+      "error": "HTTP Error 400: Bad Request"
+    }
+  ],
+  "local_runtime_receipt": {
+    "image_id": "sha256:f52b4afd4fbdf84f5b93119ff5cbf1b057e35b0e546af29537ebef9139cc3970",
+    "image_ref": "lmsysorg/sglang@sha256:c93d57460ce7fca986c7c8150b5a2231b540ca226d17ef5563ac0dcee506c136",
+    "inputs": {
+      "model.lock.json": "c5d998d4f7e83535fd0b4ce07ca82ee45fa4a38dd361b3bab36b5e0babffb9a0",
+      "patches/flash_fwd.py": "fb6bcbeb1694dcf860f8436d4b49c20ce197f6787b94a448597a4dd78d70e4f9",
+      "patches/generators/make_nvfp4_patch.py": "51c8271a6c8699d1d01eb93bdc044aab1ca749121eaaa83a0eb6924ce9134f24",
+      "patches/generators/patch_arch_gate.py": "ffc9b7928c94b7e909666d55b5e36b641418b4f89808b0d9ec0945364c75c72e",
+      "patches/generators/patch_hashk.py": "e79d21ca0c89dbad0345b19501057d63b145675f19b05dea727a3757bf0755e5",
+      "patches/generators/patch_qsa.py": "ca2f929bf173c71253ac9659c6c555a7562c31b2f64a6a39a23908f98969c704",
+      "patches/generators/patch_qsa2.py": "dae1e9bf1336fc1262f00a3d029347a6d055fff7c0edc56abce797941499e203",
+      "patches/generators/patch_ring.py": "938a4c604fe958fcb71690e8ada784f471bb869d56918f44399e197d132cbb22",
+      "patches/qsa_kv_pool.py": "11a3f05ba4ed71c88a5e03304ca229a4c83ed9aa55d2b930ab27cd39d5af1dcc",
+      "patches/qsa_metadata.py": "63b1bd35c66ca7e91d08b2d12437f1a5d6c6ccbb1ad3ba61ade9b17de37fc70e",
+      "patches/qwen4_exp_nvfp4.py": "13b34fe4f9640765c35a674424ec4d55f568193a0adacd7e4e9d6aa131aadd64",
+      "patches/qwen_sparse_attn_backend.py": "75e962ec8e52061f21da1f311fb0e93050c8f4cf2370fa0e8197c078facadf53",
+      "patches/sparse_attn.py": "fb03ec4b64f201ba22c497b7dfdeaa5c4f9951c4e8b9f901e038ab9cf3c79721",
+      "patch/patch_fp8.py": "80d28f9084644df62afbeaf1f9db52e2a8786ed12eacfa4080a9da0d3e2207c8",
+      "patch/patch_ple_off.py": "51e91b3b37dfaa801ba7394e7ef68163ae2d8e9a82b53d6335d9a3cc171af4d6",
+      "tools/prepare_runtime.py": "6c9a82b0964670c6a6c6b4369a99463bda10bcee85121f20bfcb682522dbe3f9",
+      "tools/checkpoint.py": "2a358f282f94d8c1c0c91dfaef08c58b36943699ab05705dcabefd04b6733878",
+      "tools/build_hashk_ple.py": "b621ae97d9098b5add8321ee05b1f3d41feee2c7c8385186a727b4f64e48d4d9"
+    },
+    "overlay_sha256": "244d3bcc52453e286bce0d1e502790756bfc6c4712b205ecbbff0fcb9452a295"
+  },
+  "local_launch_receipt": {
+    "mode": "1",
+    "context_length": "200000",
+    "mem_fraction": "0.90",
+    "thinking": "medium",
+    "port": "30000",
+    "listen_host": "127.0.0.1",
+    "container": "onespark-abliterated",
+    "timestamp_utc": "2026-09-08T00:02:05.969966+00:00",
+    "image_id": "sha256:f52b4afd4fbdf84f5b93119ff5cbf1b057e35b0e546af29537ebef9139cc3970"
+  }
+}

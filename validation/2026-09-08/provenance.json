@@ -1,0 +1,22 @@
+{
+  "source_archive": "OneSpark-kv-memory-breakdown-2026-09-08.tar.gz",
+  "source_archive_sha256": "520a984e7e69f9e5c0e9fb7135e4b60c69721f27c0456562d6aac8a11c3089a0",
+  "reviewed_code_archive": "OneSpark-reviewed-2026-09-08.tgz",
+  "reviewed_code_archive_sha256": "a101c46db4d4ee82b2010c1f2e93ddd37c78046073c7a8f53565ef57f95767cb",
+  "source_files": {
+    "HANDOFF.md": "7acf9e782a13fd51caf88339c996db0b2aa6810c56cd157857e0a2b90268df18",
+    "VALIDATION.md": "5366dbea3eb50325aba6807230d7af8913854c973e1a959b7a18cd049f8be269",
+    "results/full-log-rerun-2026-09-08.log": "9f621d638b98c0bf0134dc27d1da6e9cfc04c77cf82e7f0a50e209fd5d9bafd7",
+    "results/smoke-long-rerun-2026-09-08.json": "779b618e56451bd3a906da086e745880917eacf4e5e3bea07fdb9ebf3a1f4dc3",
+    "results/smoke-before.json": "af3be42a250cce4afa5958c3119cd92f8423144df23c34cbbf49fe16c4505d13"
+  },
+  "included_files": {
+    "server-memory-excerpt.txt": "c2c3fcba2857d45cb94c272238711947bf55dd7bd7acc15833e72b41a01b6b73",
+    "smoke-before.json": "af3be42a250cce4afa5958c3119cd92f8423144df23c34cbbf49fe16c4505d13",
+    "smoke-long-rerun-2026-09-08.json": "779b618e56451bd3a906da086e745880917eacf4e5e3bea07fdb9ebf3a1f4dc3"
+  },
+  "notes": [
+    "Smoke JSON files are unchanged copies.",
+    "Server log is an excerpt with original line numbers; full server arguments are omitted."
+  ]
+}

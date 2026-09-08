@@ -1,0 +1,25 @@
+Selected lines from the supplied full-log-rerun-2026-09-08.log.
+Original line numbers retained. Full server arguments and unrelated lines omitted.
+Source SHA256: ac0feafb7cb2a5749d7bb2a9f1691cedf183ed6117eb44c705d88281115c9be2
+Memory labels below are verbatim; no unit conversion was applied.
+
+23: [2026-09-08 09:49:44] Failed to get GPU memory capacity from nvidia-smi. Falling back to torch.cuda.mem_get_info(). Reported total GPU memory per device (MiB): [122502], using min: 122502 MiB.
+53: [2026-09-08 09:49:54] Load weight begin. avail mem=109.98 GB
+61: [2026-09-08 09:50:01] HashK PLE loaded: R=4 sub-rows=80000369 (~12.8 GB) from /patches/ple_hashk_R4.pt
+263: [2026-09-08 09:56:10] Q4X_FP8 ACTIVE: lm_head (248320, 2560) -> fp8 (2560, 248320)  (1.27 -> 0.64 GB, cutlass=True)
+264: [2026-09-08 09:56:11] Q4X_FP8 ACTIVE: 255 modules -> fp8 (6.05 -> 3.03 GB, saved 3.03 GB) for targets ['linear_attn', 'o_proj', 'qkv_proj', 'shared_expert']
+282: [2026-09-08 09:56:18] Using FP8 KV cache but no scaling factors provided. Defaulting to scaling factors of 1.0. This may lead to less accurate results!
+283: [2026-09-08 09:56:18] Load weight end. elapsed=383.92 s, type=Qwen4ExpForConditionalGeneration, quant=modelopt_fp4, quant_algo=NVFP4, avail mem=15.46 GB, mem usage=94.52 GB.
+288: [2026-09-08 09:56:19] Load weight begin. avail mem=15.22 GB
+465: [2026-09-08 09:57:30] Using FP8 KV cache but no scaling factors provided. Defaulting to scaling factors of 1.0. This may lead to less accurate results!
+466: [2026-09-08 09:57:30] Load weight end. elapsed=70.79 s, type=Qwen4ExpForCausalLMMTP, quant=modelopt_fp4, quant_algo=NVFP4, avail mem=14.05 GB, mem usage=1.17 GB.
+468: [2026-09-08 09:57:30] max_running_requests is capped to 4 by the mamba state cache (max_mamba_cache_size=24, 5 state slots per request). To raise it: increase --mamba-full-memory-ratio or --max-mamba-cache-size, or halve the state size with --mamba-ssm-dtype bfloat16.
+469: [2026-09-08 09:57:30] Mamba Cache is allocated. max_mamba_cache_size: 24, conv_state size: 0.05GB, ssm_state size: 1.32GB intermediate_ssm_state_cache size: 1.05GB intermediate_conv_window_cache size: 0.02GB 
+470: [2026-09-08 09:57:32] KV Cache is allocated. dtype: torch.float8_e4m3fn, #tokens: 32896, K size: 0.19 GB, V size: 0.19 GB
+471: [2026-09-08 09:57:32] Memory pool end. avail mem=11.51 GB
+472: [2026-09-08 09:57:32] KV Cache is allocated. dtype: torch.float8_e4m3fn, #tokens: 32896, K size: 0.02 GB, V size: 0.02 GB
+473: [2026-09-08 09:57:32] Memory pool end. avail mem=11.51 GB
+567: [2026-09-08 09:58:10] max_total_num_tokens=32896, chunked_prefill_size=8192, max_prefill_tokens=32768, max_running_requests=4, context_len=200000, available_gpu_mem=10.58 GB
+652: [2026-09-08 12:02:30] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.50, mamba usage: 0.17, #running-req: 0, #queue-req: 0, #pending-token: 14739, waiting-image-req: 0, cuda graph: False, input throughput (token/s): 633.11
+653: [2026-09-08 12:02:33] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.70, mamba usage: 0.17, #running-req: 0, #queue-req: 0, #pending-token: 6547, waiting-image-req: 0, cuda graph: False, input throughput (token/s): 3290.18
+654: [2026-09-08 12:02:33] Prefill batch, #new-seq: 1, #new-token: 6592, #cached-token: 0, full token usage: 0.70, mamba usage: 0.17, #running-req: 0, #queue-req: 0, #pending-token: 0, waiting-image-req: 0, cuda graph: False, input throughput (token/s): 186642.83
